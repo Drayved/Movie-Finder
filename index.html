@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="index.css">
+    <title>Movie Finder</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="headers">
+            <h1>Find your film</h1>
+            <a href="watchlist.html">
+                <button class="watchlist-btn">My Watchlist</button>
+            </a>
+        </div>
+    </header>   
+
+    <div class="search-container">
+        <input class="search-bar" type="search" placeholder="&#128270 Search for a movie"> 
+        <button class="search-btn">Search</button>
+    </div>
+
+    <section class="center">
+        <div class="empty">
+            <img class="film-img" src="images/film-roll.png" alt="">
+            <h3 class="explore">Start exploring</h3>
+        </div>
+
+        <h3 class="not-found hidden">
+            Unable to find what you're looking for. Please try another search.
+        </h3>
+    </section>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
