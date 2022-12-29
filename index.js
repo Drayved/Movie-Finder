@@ -101,11 +101,7 @@ displayHtml.addEventListener("click", function(e){
     }
 })
 
-// code not needed
-// function searchDuplicates(userMoviesArray, movieTitle) {
-//     const filteredArr = userMoviesArray.filter( userMovie => userMovie.Title === movieTitle);
-//     return filteredArr.length !== 0 ? true : false;
-// }
+
   
 
 
