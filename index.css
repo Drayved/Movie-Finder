@@ -5,7 +5,7 @@ html{
     height:100vh;
 }
 
-
+/* Header */
 
 .header-container{
     background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url("images/header.png");
@@ -24,16 +24,6 @@ html{
     justify-content: space-between;    
 }
 
-.watchlist-btn{
-    height: 10px;
-    background: none;
-    color: white;
-    border: none;
-    margin-right: 100px;
-    margin-top: 100px;
-    font-size: 1.25rem;
-}
-
 h1{
     margin-left: 80px;
     margin-top: 100px;
@@ -46,7 +36,32 @@ h1{
     display: flex;
     width: 90%;
     margin: 0 auto;
-    
+}
+
+.search-bar{
+    padding: 12px;
+    width: 100%; 
+}
+
+/* buttons */
+
+.add-btn,
+.remove-btn{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline;
+}
+
+.watchlist-btn{
+    height: 10px;
+    background: none;
+    color: white;
+    border: none;
+    margin-right: 100px;
+    margin-top: 100px;
+    font-size: 1.25rem;
 }
 
 .search-bar,
@@ -56,23 +71,17 @@ h1{
     border: 1px solid rgb(136, 136, 136);
 }
 
-.search-bar{
-    padding: 12px;
-    width: 100%;
-    
-}
-
 .search-btn{
     padding-right:30px;
     background-color: white;
     padding: 0 60px;
-    
-    
 }
 
 button{
     cursor: pointer;
 }
+
+/* movie content */
 
 .film-img{
     width: 100px;
@@ -87,17 +96,6 @@ button{
     margin-top: 250px;
     color:rgb(180, 179, 179);
     font-size: 1.2rem;
-}
-
-
-
-.add-btn,
-.remove-btn{
-    background-color: transparent;
-    border: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    display: inline;
 }
 
 .plus-icon,
@@ -160,16 +158,3 @@ button{
     display:none;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-    body,
-    html {
-      color: #fff;
-      background-color: #121212;
-    }
-
-    .new-movie,
-    .add-btn,
-    .remove-btn{
-        color: #fff
-    }
-}

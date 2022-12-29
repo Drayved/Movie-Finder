@@ -1,15 +1,8 @@
 const searchBtn = document.querySelector(".search-btn")
-
 const displayHtml = document.querySelector(".center")
 const movieName = document.querySelector(".search-bar")
-let userMoviesArr = []
 const explore = document.querySelector(".empty")
-
-
-
-
-console.log(localStorage)
-
+let userMoviesArr = []
 
 movieName.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
@@ -17,7 +10,6 @@ movieName.addEventListener("keypress", function(e) {
         searchBtn.click()
     }
 })
-
 
 searchBtn.addEventListener("click", movieSearch)
 
@@ -61,10 +53,7 @@ function render(data){
                     <button class="add-btn" id="${data.imdbID}">
                         <img class="plus-icon" src="images/plus-icon.png">Watchlist
                     </button>
-
-
                     <p class="watchlist-add"></p>
-
                 </div>
                 <div class="imdbID hidden">
                 <p>${data.imdbID} </p>
@@ -74,21 +63,20 @@ function render(data){
                 </div>
             </div>
             `
-        },1000)
+        },500)
     })
    
     // code not working, was to keep button disabled on refresh, will fix later
-    const temp = localStorage.getItem("userMovies")
-    if (window.localStorage == temp){
-        document.querySelectorAll(".add-btn").forEach(element => element.disabled = true);
-    }
+
+    // const temp = localStorage.getItem("userMovies")
+    // if (window.localStorage == temp){
+    //     document.querySelectorAll(".add-btn").forEach(element => element.disabled = true);
+    // }
     
 }
 
-
-
-
 displayHtml.addEventListener("click", function(e){
+
     const movieEl = e.target.closest(".new-movie")
     const movieObj = {
         Title: movieEl.querySelector('.movie-title').textContent,
@@ -108,13 +96,8 @@ displayHtml.addEventListener("click", function(e){
             userMoviesArr =JSON.parse(localStorage.getItem("userMovies"))
         }
 
-
-        
         userMoviesArr.unshift(movieObj)
         localStorage.setItem("userMovies", JSON.stringify(userMoviesArr))
-       
-
-
     }
 })
 
